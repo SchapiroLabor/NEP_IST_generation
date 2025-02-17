@@ -27,7 +27,7 @@ for ct_prob in "${CT_PROBABILITIES[@]}"; do
     for nh_prob in "${NH_PROBABILITIES[@]}"; do
         echo "Running simulation with ct_prob=$ct_prob and nh_prob=$nh_prob"
         
-        python ./IST_4ct_heuristic_simulation_asymmetric.py \
+        python scripts/IST_4ct_heuristic_simulation_asymmetric.py \
             --ct_prob "$ct_prob" \
             --nh_prob "$nh_prob" \
             --scaffold_range "$SCAFFOLD_START" "$SCAFFOLD_END" \
