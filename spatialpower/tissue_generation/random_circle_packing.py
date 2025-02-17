@@ -8,6 +8,8 @@ import time
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
+
+
 def sample_line_segment(x_a, x_b, rc_a, rc_b, r_min, r_max):
     r = x_b - x_a
     l = np.linalg.norm(r, ord=2)  # L2 norm
@@ -218,6 +220,10 @@ if __name__ == '__main__':
     parser.add_argument('-v', '--voronoi', default=True, action="store_true", help='If present, draw the voronoi.')
     args = parser.parse_args()
 
+    # set seed based on number given in output directory
+    seed = int(args.outdir.rstrip('/').split('/')[-1].split('_')[0]) 
+    np.random.seed(seed)
+    
     ab = np.array([args.width, args.height])
 
     r_min = args.rmin
