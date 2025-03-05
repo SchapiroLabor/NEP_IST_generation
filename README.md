@@ -1,4 +1,4 @@
-# IST_generation_SCNA
+# In silico tissue (IST) generation for NEP comparison
 In silico tissue generation for generation of tissue cohorts for SCNA comparison (https://www.nature.com/articles/s41592-023-01766-6)
 
 ## Summary
