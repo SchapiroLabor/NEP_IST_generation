@@ -29,6 +29,6 @@ Second, we assigned cell type labels in the empty tissue scaffold using bash scr
 - IST_4ct_heuristic_simulation_asymmetric.py: Script for cell type labeling with heuristic approoach generating cohorts for ssymmetric dataset with differrent levels of cross preference of cell type 0 to cell  type 1 (random, weak, strong). 4 cell types, different cell type 0 abundance options.
 
 #### home
-- scaffold_creat.sh: bash script for creating tissue scaffolds on Helix cluster. Alternatively, run `python spatialpower/tissue_generation/random_circle_packing.py -x 1000 -y 1000 --visualization --rmax 10 --rmin 10 -o sample_results/1_` for creating empty tissue scaffold from command line.
-- sym_dataset_create.sh: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. Used for generatinon of symmetric D1 dataset with self preference of ct 0. 
-- asym_dataset_create.sh: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. Used for generatinon of asymmetric D2 dataset with cross preference of ct 0 to ct 1. 
+- scaffold_create.sh: bash script for creating tissue scaffolds on Helix cluster. Alternatively, run `python spatialpower/tissue_generation/random_circle_packing.py -x 1000 -y 1000 --visualization --rmax 10 --rmin 10 -o sample_results/1_` for creating empty tissue scaffold from command line.
+- sym_dataset_create.sh: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. Used for generation of symmetric D1 dataset with self preference of ct 0. 
+- asym_dataset_create.sh: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. Used for generation of asymmetric D2 dataset with cross preference of ct 0 to ct 1. 
