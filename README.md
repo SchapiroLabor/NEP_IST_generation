@@ -1,5 +1,5 @@
 # In silico tissue (IST) generation for NEP comparison
-In silico tissue generation for generation of tissue cohorts for SCNA comparison (https://www.nature.com/articles/s41592-023-01766-6)
+In silico tissue generation for generation of tissue cohorts for NEP comparison (https://www.nature.com/articles/s41592-023-01766-6)
 
 ## Summary
 We generated in silico tissues (IST) using the open source IST generation method from Baker et al.(2023). We used the provided Python scripts for tissue scaffold generation and cell type label assignment (klarman-cell-observatory/PowerAnalysisForSpatialOmics). This repo copied the spatialpower folder from the respective githubrepository and uploaded in here. We only adapted the random_circle_packing.py script to also extract matrices as .csv file for labeling instead of only visualization images, as now merged in https://github.com/klarman-cell-observatory/PowerAnalysisForSpatialOmics/pull/7.
