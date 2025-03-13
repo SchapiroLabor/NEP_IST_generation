@@ -212,7 +212,7 @@ def heuristic_assignment(graph, cell_type_probabilities, neighborhood_probabilit
                 attribute_dict[start_node_id] = start_node_type # set it in the attributes dict
 
                 # Calculate the neighborhood of the start node. 
-                graph_distance = 15
+                graph_distance = 2
                 neighborhood = nx.ego_graph(graph, start_node_id, radius = graph_distance)
                 neighborhood_nodes = list(neighborhood.nodes)
 
@@ -284,7 +284,7 @@ def heuristic_assignment(graph, cell_type_probabilities, neighborhood_probabilit
                 attribute_dict[start_node_id] = start_node_type # set it in the attributes dict
 
                 # Calculate the neighborhood of the start node. 
-                graph_distance = 15
+                graph_distance = 2
                 neighborhood = nx.ego_graph(graph, start_node_id, radius = graph_distance)
                 neighborhood_nodes = list(neighborhood.nodes)
 
@@ -307,7 +307,7 @@ def heuristic_assignment(graph, cell_type_probabilities, neighborhood_probabilit
             attribute_dict[start_node_id] = start_node_type # set it in the attributes dict
 
              # Calculate the neighborhood of the start node. 
-            graph_distance = 15
+            graph_distance = 2
             neighborhood = nx.ego_graph(graph, start_node_id, radius = graph_distance)
             neighborhood_nodes = list(neighborhood.nodes)
 
