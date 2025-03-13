@@ -2,10 +2,10 @@
 eval "$(conda shell.bash hook)"
 conda activate pow
 
-# Move to the correct working directory (adjust if needed)
+# Move to the correct working directory
 cd /Users/chiaraschiller/Documents/Schapiro/projects/SCNA_thesis/github/IST_gen/IST_generation_SCNA
 
-# Define the output directory (using the relative path that worked manually)
+# Define the output directory
 OUTPUT_FOLDER="./../../../data/20250217_asym01_nbh2_1000dim_grid200_300iter_50swaps"
 
 # Check if the directory exists
