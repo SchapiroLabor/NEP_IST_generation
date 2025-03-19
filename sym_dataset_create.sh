@@ -8,6 +8,9 @@ cd /Users/chiaraschiller/Documents/Schapiro/projects/SCNA_thesis/github/IST_gen/
 # Define the output directory
 OUTPUT_FOLDER="./../../../data/20250217_sym00_nbh2_1000dim_grid200_300iter_50swaps"
 
+# Add the directory containing the spatialpower module to the Python path
+export PYTHONPATH=$PYTHONPATH:/Users/chiaraschiller/Documents/Schapiro/projects/SCNA_thesis/github/IST_gen/NEP_IST_generation/
+
 # Check if the directory exists
 if [[ -d "$OUTPUT_FOLDER" ]]; then
     echo "Output folder exists: $OUTPUT_FOLDER"

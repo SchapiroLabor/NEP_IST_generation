@@ -40,8 +40,8 @@ def build_assignment_matrix(attribute_dict, n_cell_types):
 
 def simulate_tissue(scaffold_id, ct_prob, nh_prob, output_folder):
     """Run the tissue simulation for a given scaffold."""
-    A = np.load(f"./sample_results/{scaffold_id}_A.npy")
-    C = np.load(f"./sample_results/{scaffold_id}_C.npy")
+    A = np.load(f"./../sample_results/{scaffold_id}_A.npy")
+    C = np.load(f"./../sample_results/{scaffold_id}_C.npy")
     np.random.seed(scaffold_id)
 
     position_dict = {j: C[j, :] for j in range(C.shape[0])}
@@ -62,10 +62,10 @@ def simulate_tissue(scaffold_id, ct_prob, nh_prob, output_folder):
     B = build_assignment_matrix(cell_assignments, n_cell_types=4)
 
     # Save visualization for the first scaffold
-    if scaffold_id == 1:
-        viz.make_vor(1000, cell_assignments, position_dict, 4,
-                     f'{output_folder}/../20250217_visualisation/',
-                     f"sim_{scaffold_id}", list(range(C.shape[0])))
+    #if scaffold_id == 1:
+   #     viz.make_vor(1000, cell_assignments, position_dict, 4,
+   #                  f'{output_folder}/../20250217_visualisation/',
+   #                  f"sim_{scaffold_id}", list(range(C.shape[0])))
 
     # Save output
     df = pd.DataFrame(np.column_stack((C, list(cell_assignments.values()))), columns=['x', 'y', 'ct'])

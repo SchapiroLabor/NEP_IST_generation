@@ -6,6 +6,7 @@ import spatialpower.tissue_generation.visualization as viz
 import networkx as nx
 import os
 
+
 # Define cell type and neighborhood probability options
 CT_PROBABILITIES = {
     "0.05":  np.array([0.05, 0.32, 0.32, 0.31]),
@@ -40,8 +41,8 @@ def build_assignment_matrix(attribute_dict, n_cell_types):
 
 def simulate_tissue(scaffold_id, ct_prob, nh_prob, output_folder):
     """Run the tissue simulation for a given scaffold."""
-    A = np.load(f"./sample_results/{scaffold_id}_A.npy")
-    C = np.load(f"./sample_results/{scaffold_id}_C.npy")
+    A = np.load(f"./../sample_results/{scaffold_id}_A.npy")
+    C = np.load(f"./../sample_results/{scaffold_id}_C.npy")
     np.random.seed(scaffold_id)
 
     position_dict = {j: C[j, :] for j in range(C.shape[0])}
