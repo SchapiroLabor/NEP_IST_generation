@@ -14,6 +14,8 @@ First, blank tissue scaffolds are generated with a random-circle packing algorit
 ### Conda environment
 `conda create -n pow python=3.9 networkx=2.6.2 matplotlib=3.4.2 scipy jupyter -c conda-forge`
 
+The environemtn file can be found in the folder `/env`. 
+
 
 ### Tissue simulation
 We generated 100 empty tissue scaffolds for labelling with the indicated parameters. Seeds were set based on the given first number of the output file name. Either use provided bash script to recreate the study simulated data (scaffold_create.sh) or
@@ -23,14 +25,22 @@ We generated 100 empty tissue scaffolds for labelling with the indicated paramet
 Second, we assigned cell type labels in the empty tissue scaffold using bash scripts that combine all different cell type abundance levels with the different cell-cell adjacency matrices (symmetric or asymmetric dataset in the study). Seeds were set based on the scaffold number used (sym_dataset_create.sh, asym_dataset_create.sh).
 
 ### Structure
-#### spatialpower:
-- files from original github repository `klarman-cell-observatory/PowerAnalysisForSpatialOmics` for scaffold generation and cell type labeling. Minorly adapted to extract .csv matrices for labeling.
 
-#### scripts
-- IST_4ct_heuristic_simulation_symmetric.py: Script for cell type labeling with heuristic approach generating cohorts for symmetric dataset with differrent levels of self preference of cell type 0 (random, weak, strong). 4 cell types, different cell type 0 abundance options. 
-- IST_4ct_heuristic_simulation_asymmetric.py: Script for cell type labeling with heuristic approach generating cohorts for ssymmetric dataset with differrent levels of cross preference of cell type 0 to cell  type 1 (random, weak, strong). 4 cell types, different cell type 0 abundance options.
+`/spatialpower`:
+- files from original github repository `klarman-cell-observatory/PowerAnalysisForSpatialOmics` for scaffold generation and cell type labeling. Minorly adapted to extract .csv matrices for labeling (see https://github.com/klarman-cell-observatory/PowerAnalysisForSpatialOmics/pull/7)
 
-#### home
-- scaffold_create.sh: bash script for creating tissue scaffolds on Helix cluster. Alternatively, run `python spatialpower/tissue_generation/random_circle_packing.py -x 1000 -y 1000 --visualization --rmax 10 --rmin 10 -o sample_results/1_` for creating empty tissue scaffold from command line and vary naming number from 1-100.
-- sym_dataset_create.sh: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. This script runs IST_4ct_heuristic_simulation_symmetric.py with all combinations of cell type abundances and cell-cell adjacencies. It was used for generation of the symmetric D1 dataset with self preference of ct 0. 
-- asym_dataset_create.sh: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. This script runs IST_4ct_heuristic_simulation_ssymmetric.py with all combinations of cell type abundances and cell-cell adjacencies. Used for generation of the asymmetric D2 dataset with cross preference of ct 0 to ct 1. 
+`/scripts`:
+- `/IST_4ct_heuristic_simulation_symmetric.py`: Script for cell type labeling with heuristic approach generating cohorts for symmetric dataset with differrent levels of self preference of cell type 0 (random, weak, strong). 4 cell types, different cell type 0 abundance options. 
+- `/IST_4ct_heuristic_simulation_asymmetric.py`: Script for cell type labeling with heuristic approach generating cohorts for ssymmetric dataset with differrent levels of cross preference of cell type 0 to cell  type 1 (random, weak, strong). 4 cell types, different cell type 0 abundance options.
+
+`/envs`:
+- `/env.yml`: Environment file from used conda environment.
+
+
+`/scaffold_create.sh`: bash script for creating tissue scaffolds on Helix cluster. Alternatively, run `python spatialpower/tissue_generation/random_circle_packing.py -x 1000 -y 1000 --visualization --rmax 10 --rmin 10 -o sample_results/1_` for creating empty tissue scaffold from command line and vary naming number from 1-100.
+
+
+`/sym_dataset_create.sh`: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. This script runs IST_4ct_heuristic_simulation_symmetric.py with all combinations of cell type abundances and cell-cell adjacencies. It was used for generation of the symmetric D1 dataset with self preference of ct 0. 
+
+
+`asym_dataset_create.sh/`: bash script for assigning labels on empty tissue scaffold from scaffold_create.sh. This script runs IST_4ct_heuristic_simulation_ssymmetric.py with all combinations of cell type abundances and cell-cell adjacencies. Used for generation of the asymmetric D2 dataset with cross preference of ct 0 to ct 1. 
