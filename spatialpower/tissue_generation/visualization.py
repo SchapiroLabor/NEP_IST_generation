@@ -118,9 +118,11 @@ def make_vor(dim, attribute_dict, position_dict, n_cell_types, results_dir, grap
         polygon = vertices[region]
         ax2.fill(*zip(*polygon), alpha=0.8, facecolor=colors[r], edgecolor = 'k')
         
-    # plt.plot(C[:,0], C[:,1], 'o', markersize=1, color = 'k')
+    #plt.plot(C[:,0], C[:,1], 'o', markersize=1, color = 'k')
     ax2.axis('equal')
     ax2.set(xlim=(0 - 0.01*ab[0], ab[0] + 0.01 * ab[0]), ylim=(0 - 0.01*ab[1], ab[1] + 0.01 * ab[1]))
-    plt.savefig(results_dir + 'vor_' + str(graph_id) + '.pdf')
+    print(f"Saving visualization to: {results_dir}/vor_fig_{graph_id}.pdf")
+    plt.savefig(results_dir + f'/vor_fig_{graph_id}.pdf')
+    plt.savefig(results_dir + '/vor_fig_' + str(graph_id) + '.pdf')
     plt.close()
     return 

@@ -62,10 +62,10 @@ def simulate_tissue(scaffold_id, ct_prob, nh_prob, output_folder):
     B = build_assignment_matrix(cell_assignments, n_cell_types=4)
 
     # Save visualization for the first scaffold
-    #if scaffold_id == 1:
-   #     viz.make_vor(1000, cell_assignments, position_dict, 4,
-   #                  f'{output_folder}/../20250217_visualisation/',
-   #                  f"sim_{scaffold_id}", list(range(C.shape[0])))
+    if scaffold_id == 1:
+        viz.make_vor(1000, cell_assignments, position_dict, 4,
+                     f'{output_folder}/visualization/',
+                     f"sim_{args.ct_prob}_{args.nh_prob}_{scaffold_id}", list(range(C.shape[0])))
 
     # Save output
     df = pd.DataFrame(np.column_stack((C, list(cell_assignments.values()))), columns=['x', 'y', 'ct'])

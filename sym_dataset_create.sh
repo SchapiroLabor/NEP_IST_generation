@@ -3,7 +3,7 @@ eval "$(conda shell.bash hook)"
 conda activate pow
 
 # Move to the correct working directory
-cd /Users/chiaraschiller/Documents/Schapiro/projects/SCNA_thesis/github/IST_gen/IST_generation_SCNA
+cd /Users/chiaraschiller/Documents/Schapiro/projects/SCNA_thesis/github/IST_gen/NEP_IST_generation/
 
 # Define the output directory
 OUTPUT_FOLDER="./../../../data/20250217_sym00_nbh2_1000dim_grid200_300iter_50swaps"
