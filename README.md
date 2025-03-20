@@ -37,6 +37,8 @@ or
 
 `bash asym_dataset_create.sh`
 
+The image plots of the labelled images (each of the first scaffold) will be saved in a `visualization` folder in your output folder, that you need to create. 
+
 
 ### Structure
 
